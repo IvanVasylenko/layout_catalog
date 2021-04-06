@@ -1,9 +1,12 @@
 .catalog {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: cardShift($card-width, $margin-hor);
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, $card-width);
+  gap: $gap-ver $gap-hor;
+  padding: 0 $catalogPadding;
 
-  &__card {
-    margin: 0 $margin-hor $margin-ver;
+  @media (min-width: catalogWidth($card-width, $gap-hor)) {
+    grid-template-columns: repeat($card-caunt, $card-width);
   }
 }
