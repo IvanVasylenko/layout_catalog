@@ -1,3 +1,7 @@
-@function cardShift($card-width, $margin-hor) {
-  @return $card-width * $card-caunt + $margin-hor * ($card-caunt * 2);
+@function catalogWidth($card-width, $gap-hor) {
+  @return (
+    $card-width * $card-caunt) 
+    + ($gap-hor * ($card-caunt - 1)) 
+    + ($catalogPadding * 2
+  );
 }
